@@ -1,0 +1,1 @@
+# responsive_price_card
