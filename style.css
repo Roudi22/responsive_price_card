@@ -16,88 +16,88 @@ h2, h3, h4, p {
 }
 
 body {
-  padding: 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-#card {
- 
+.card{
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   box-shadow: 3px 1px 14px 0px rgba(0,0,0,0.24);
   border-radius: 5px;
-  overflow: hidden;
   
 }
 
-#top-section {
-  width: 100%;
-  height: 45%;
+.top-section {
+  grid-column: span 2;
+  
   padding: 30px;
 }
+.top-section h3 {
+    color: #2ab2af;
+    margin-bottom: 15px;
+  }
 
-#bottom-section {
-  width: 100%;
-  height: 55%;
-  color: #fff;
   
+.top-section-text {
+    color: #98a6bd;
+  }
   
+.days{
+    color: #c0df34;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-#bottom-left-section {
-  width: 100%;
-  height: 100%;
+.bottom-left-section {
+  color: #fff;
   padding: 30px;
   background-color: #2ab2af;
   
 }
 
-#bottom-right-section {
-  width: 100%;
-  height: 100%;
+.bottom-right-section {
+  color: #fff;
   padding: 30px;
-  
   background-color: #49BEBD;
 }
-
-#top-section h3 {
-  color: #2ab2af;
-  margin-bottom: 15px;
+.button_div {
+    margin-top: 30px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    height: 46px;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 7px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.159);
 }
 
-#top-section h4 {
-  color: #c0df34;
-  margin-bottom: 15px;
-}
-
-#top-section p {
-  color: #98a6bd;
-}
-button {
-  background-color: #c0df34;
-  color: #fff;
-  font-family: 'Karla', sans-serif;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%;
-  height: 28%;
-}
-
-button:hover {
+.button:hover {
   cursor: pointer;
   background-color: #C9EB36;
 }
-#price-number {
+.price-number {
   font-weight: 700;
   font-size: 25px;
 }
 
-#bottom-left-section h4 {
+.bottom-left-section h4 {
   margin-bottom: 10px;
 }
 
-#bottom-left-section p {
+.bottom-left-section p {
   margin-bottom: 15px;
 }
 
-#price-month {
+.price-month {
   display: inline-block;
   color:#e5eff5 ;
   position: relative;
@@ -115,13 +115,10 @@ ul li {
   opacity: 0.6;
 }
 
-@media (min-width: 576px) {
-  #bottom-section {
-    display: flex;
-  }
-  #card {
-    width: 550px;
-  height: 400px;
-    color: orange;
-  }
-}
+@media (max-width: 742px) {
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
